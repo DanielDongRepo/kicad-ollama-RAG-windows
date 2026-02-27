@@ -115,17 +115,14 @@ curl http://localhost:11434/api/tags
 1. 发现 3 处走线宽度为 0.12mm，低于规范要求的 0.15mm。
 2. 未检测到去耦电容信息，建议检查 U1～U5 电源引脚。
 ...
-
 ---
 📌 总结：Windows 部署要点
 所有print日志文件保存到txt或者log，因为kicad不支持打印
 
+
 清理现有环境
 # 删除旧环境
 rd /s /q C:\kicad-ai-inspector\rag-env
-# 创建新虚拟环境（使用你的 Anaconda Python 3.13）
-python -m venv rag-env
-.\rag-env\Scripts\Activate.ps1
 
 
 总结：先用kicad里边自带的python创建一个虚拟环境，因为里边包含一个pcbnew包，而系统python没有，然后需要另一个环境推荐python3.1.1，按照requestments里边安装，创建环境，运行build_RAG.py生成build_RAG.log和chroma_db文件夹，运行inspect_pcb.py成功构建知识库后，调用本地大模型生成报告pcb_analysis_report.txt
