@@ -1,0 +1,12 @@
+langchain==0.3.7
+langchain-community==0.3.7
+langchain-core==0.3.17
+langchain-text-splitters==0.3.0
+chromadb==0.5.18
+numpy==1.26.4
+ollama==0.3.3
+unstructured==0.18.27
+PyYAML==6.0.2
+requests==2.32.3
+tqdm==4.66.6
+pypdf==5.1.0
